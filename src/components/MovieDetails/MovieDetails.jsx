@@ -1,6 +1,20 @@
+
+
+
+
+
+
+
 function MovieDetails (){
+
+
+
     return (
         <p>Movie Details</p>
+
+       
+
+
     )
 }
 
