@@ -15,6 +15,7 @@ function MovieList() {
     }, []);
 
     const movieDetails = () => {
+        dispatch({ type: 'FETCH_DETAILS' });
         history.push('/details')
     }
 
