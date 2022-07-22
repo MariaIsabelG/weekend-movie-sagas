@@ -84,3 +84,5 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+// LEFT OFF - I need to find a way to select a specific movie and render all its details
