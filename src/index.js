@@ -30,10 +30,10 @@ function* fetchAllMovies() {
         
 }
 
-function* fetchDetails(){
+function* fetchDetails(action){
     try{
-        const details = yield axios.get('/api/genre');
-        console.log( 'These are the details:', details.data );
+        const details = yield axios.get('/api/genre/', {id: action.payload} );
+        console.log('This is payload in sage:', action.payload)
         yield put({ type: 'SET_GENRES', payload: details.data });
     }catch ( error ){
         console.log( 'Error in getchDetails saga:', error );
@@ -85,4 +85,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// LEFT OFF - I need to find a way to select a specific movie and render all its details
+// LEFT OFF --- specific movie id is not getting to the server/router

@@ -1,13 +1,16 @@
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function MovieItems ({movie}){
 
     const history = useHistory();
+    const dispatch = useDispatch();
+
 
     const movieDetails = () => {
-        dispatch({ type: 'FETCH_DETAILS', payload: movie.id
-                });
+        dispatch({ type: 'FETCH_DETAILS', payload: movie.id });
         history.push('/details')
+        console.log( 'This is the id chosen:', movie.id)
     }
 
     return (
