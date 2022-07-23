@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 
 function MovieDetails (){
 
+
     const details = useSelector( (store) => store.genres)
 
     return (
