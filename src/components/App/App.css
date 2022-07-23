@@ -46,6 +46,9 @@ body{
   border-width: 10px;
   border-image: linear-gradient(#f63c3c, #4d9f0c) 30;
 }
+.description {
+  margin:20px
+}
 
 
 

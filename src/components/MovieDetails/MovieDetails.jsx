@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 function MovieDetails (){
 
-
+   
     const details = useSelector( (store) => store.genres)
  
     return (
@@ -13,12 +13,12 @@ function MovieDetails (){
                 <div className="item-container">
                     <img className="images-item" src={details[0].poster}/>
                     <h3>Title:</h3> <p>{details[0].title}</p>
-                    <h3>Description:</h3> <p>{details[0].description}</p>
+                    <h3>Description:</h3> <p className="description">{details[0].description}</p>
                     <h3>Genres:</h3>
                     {details.map(( detail =>{
                         return (<li>{detail.name}</li>)
                     })
-                    )}
+                    )} 
                 </div>
         </div>
     )
