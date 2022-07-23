@@ -14,8 +14,8 @@
 }
 
 body{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-image: url();
+  font-family: papyrus;
+  background-color: #f0cc97;
 }
 
 .images{
@@ -25,7 +25,7 @@ body{
 .img-container{
 
   margin:10px;
-  color: rgb(159, 89, 19);
+  color: rgb(117, 65, 12);
 }
 
 

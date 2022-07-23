@@ -6,7 +6,7 @@ function MovieDetails (){
     const details = useSelector( (store) => store.genres)
 
     useEffect(() => {
-        console.log ( 'These are the details from the movie:', details)
+        console.log ( 'These are the details from the movie:', genres)
     }, []);
     
 
