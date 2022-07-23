@@ -32,8 +32,8 @@ function* fetchAllMovies() {
 
 function* fetchDetails(action){
     try{
-        const details = yield axios.get('/api/genre/', {id: action.payload} );
-        console.log('This is payload in sage:', action.payload)
+        const details = yield axios.get(`/api/genre/${action.payload}` );
+        console.log('This is payload in saga:', action.payload)
         yield put({ type: 'SET_GENRES', payload: details.data });
     }catch ( error ){
         console.log( 'Error in getchDetails saga:', error );
