@@ -1,9 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-
-
-
 function MovieDetails (){
 
     const details = useSelector( (store) => store.genres)
