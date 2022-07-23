@@ -1,14 +1,10 @@
-import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 
 function MovieDetails (){
 
     const details = useSelector( (store) => store.genres)
-
-    useEffect(() => {
-        console.log ( 'These are the details from the movie:', genres)
-    }, []);
-    
 
     return (
         <div>

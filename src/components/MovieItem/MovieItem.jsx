@@ -19,7 +19,7 @@ function MovieItems ({movie}){
             <h3>{movie.title}</h3>
             <img className="images" onClick={movieDetails} src={movie.poster} alt={movie.title}/>
         </div>
-      
+    
     )
 }
 

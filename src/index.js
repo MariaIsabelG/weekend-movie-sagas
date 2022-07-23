@@ -11,34 +11,6 @@ import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
-// Create the rootSaga generator function
-function* rootSaga() {
-    yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    yield takeEvery('FETCH_DETAILS', fetchDetails);
-}
-
-function* fetchAllMovies() {
-    // get all movies from the DB
-    try {
-        const movies = yield axios.get('/api/movie');
-        console.log('get all:', movies.data);
-        yield put({ type: 'SET_MOVIES', payload: movies.data });
-
-    } catch {
-        console.log('get all error');
-    }
-        
-}
-
-function* fetchDetails(action){
-    try{
-        const details = yield axios.get(`/api/genre/${action.payload}` );
-        console.log('This is payload in saga:', action.payload)
-        yield put({ type: 'SET_GENRES', payload: details.data });
-    }catch ( error ){
-        console.log( 'Error in getchDetails saga:', error );
-    }
-}
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -63,6 +35,34 @@ const genres = (state = [], action) => {
     }
 }
 
+function* fetchAllMovies() {
+    // get all movies from the DB
+    try {
+        const movies = yield axios.get('/api/movie');
+        console.log('get all:', movies.data);
+        yield put({ type: 'SET_MOVIES', payload: movies.data });
+
+    } catch {
+        console.log('get all error');
+    }
+        
+}
+
+function* fetchDetails(action){
+    try{
+        const details = yield axios.get(`/api/genre/${action.payload}` );
+        yield put({ type: 'SET_GENRES', payload: details.data })
+    }catch ( error ){
+        console.log( 'Error in getchDetails saga:', error );
+    }
+}
+
+// Create the rootSaga generator function
+function* rootSaga() {
+    yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('FETCH_DETAILS', fetchDetails);
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
@@ -85,4 +85,3 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// LEFT OFF --- specific movie id is not getting to the server/router
