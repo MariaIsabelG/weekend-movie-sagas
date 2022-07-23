@@ -3,44 +3,29 @@
 }
 
 .App-header {
-  background-color: ;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  background-image: url(https://img.wallpapersafari.com/desktop/800/450/44/41/9cFl2a.jpg);
+  background-repeat: repeat;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: brown;
+  text-shadow: 0 0 5px #FF0000, 0 0 10px white;
+  
+
 }
 
-.App-title {
-  font-size: 1.5em;
+body{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url();
 }
 
-.App-intro {
-  font-size: large;
+.images{
+  border-radius: 15px;
+  border-color: #9900ff, 20px;
+}
+.img-container{
+
+  margin:10px;
+  color: rgb(159, 89, 19);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes color {
-  0%   { background: #0046c2; }
-  20%  { background: #ba44cd; }
-  40%  { background: #95f4b0; }
-  60%  { background: #006efe; }
-  80%  { background: #9900ff; }
-  100% { background: #3fff00; }
-}
-
-body {
-  background: #33CCCC; /* Fallback */
-  animation: color 9s infinite linear;
-  text-align: center;
-  padding: 2em;
-}
-h1 {
-  text-align: center;
-  font-family: 'Kavoon', sans-serif;
-  font-size: 2.5em;
-  color: white;
-}
 

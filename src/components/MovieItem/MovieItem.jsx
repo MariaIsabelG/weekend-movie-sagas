@@ -15,9 +15,9 @@ function MovieItems ({movie}){
     }
 
     return (
-        <div key={movie.id} >
+        <div className="img-container" key={movie.id} >
             <h3>{movie.title}</h3>
-            <img onClick={movieDetails} src={movie.poster} alt={movie.title}/>
+            <img className="images" onClick={movieDetails} src={movie.poster} alt={movie.title}/>
         </div>
     )
 }
