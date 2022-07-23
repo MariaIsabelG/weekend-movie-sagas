@@ -19,13 +19,33 @@ body{
 }
 
 .images{
-  border-radius: 15px;
-  border-color: #9900ff, 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 10px;
+  border-image: linear-gradient(#f63c3c, #4d9f0c) 30;
 }
+
 .img-container{
 
-  margin:10px;
+  margin: 10px;
   color: rgb(117, 65, 12);
 }
+.images:hover{
+
+  box-shadow: 7px 7px 10px rgb(4, 4, 4);
+} 
+
+.title-text{
+  text-shadow: 5px 5px 5px #5b519d, 5px 5px 5px rgb(81, 67, 238);
+  color:#1e0aa0;
+  font-weight: bold;
+}
+.images-item{
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 10px;
+  border-image: linear-gradient(#f63c3c, #4d9f0c) 30;
+}
+
 
 
