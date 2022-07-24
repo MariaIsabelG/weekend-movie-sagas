@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import MovieDetails from '../MovieDetails/MovieDetails';
+
 
 function MovieItems ({movie}){
 

@@ -12,6 +12,7 @@ import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
 
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -52,11 +53,11 @@ function* fetchDetails(action){
     try{
         const details = yield axios.get(`/api/genre/${action.payload}` );
         yield put({ type: 'SET_GENRES', payload: details.data })
-    }catch ( error ){
+         }catch ( error ){
         console.log( 'Error in getchDetails saga:', error );
     }
-}
-
+};
+ 
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
