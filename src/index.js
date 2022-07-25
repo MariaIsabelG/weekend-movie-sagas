@@ -26,8 +26,9 @@ const movies = (state = [], action) => {
     }
 }
 
+const initialState = ['']
 // Used to store the movie genres
-const genres = (state = [], action) => {
+const genres = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_GENRES':
             return action.payload;
